@@ -38,11 +38,18 @@ function Truck.update(dt)
         Sfx.beep()
     end
 
-    -- shove anyone standing in the road out of the way
+    -- shove anyone standing in the road out of the way. The velocity push
+    -- is resolved by squad.lua:integrate (which owns fence crossings); the
+    -- immediate nudge is clamped so it can never skip the fence line where
+    -- there's no gate/driveway to cross at.
     for _, m in ipairs(G.crew) do
         if m.y > C.ROAD_Y - 4 and math.abs(m.x - tk.x) < 46 then
             m.vy = -160
-            m.y = m.y - 60 * dt
+            local ny = m.y - 60 * dt
+            if ny < C.FENCE_Y and not Street.canCross(m.x) then
+                ny = C.FENCE_Y
+            end
+            m.y = ny
         end
     end
 
