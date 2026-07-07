@@ -4,6 +4,16 @@
 
 ![screenshot](screenshot.png)
 
+**[Read the player's manual](MANUAL.md)** — full controls, every bin,
+hazard and bonus, and tips.
+
+## Play it
+
+Grab the prebuilt `BinNight.pdx.zip` from the GitHub **Releases** page
+(or the `dist/` folder), then sideload it at
+<https://play.date/account/sideload/> — or unzip it and open the `.pdx`
+in the Playdate Simulator. No dev toolchain required.
+
 Collection night in the suburbs. The garbage truck arrives at dawn and eats
 the street bin by bin — everything still in a bin when the claw closes is
 gone. **Trash Panda** (pries, tips, hauls the heavy stuff), **Bin Chicken**

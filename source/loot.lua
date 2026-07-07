@@ -25,11 +25,10 @@ end
 function Loot.take(m, def, x, y, dare)
     if not m.carry and Loot.canCarry(m.kind, def.cls) then
         m.carry = { def = def, h = { [m.kind] = true }, soggy = false, dare = dare or false }
-        Fx.text(def.n, x, y - 28)
     else
         Loot.spawnGround(def, x + math.random(-14, 14), y + 10, dare)
-        Fx.text(def.n, x, y - 28)
     end
+    Fx.text(def.n, x, y - 28)
 end
 
 function Loot.pickup(m)

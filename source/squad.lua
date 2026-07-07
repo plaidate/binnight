@@ -11,7 +11,7 @@ local function member(kind, x, y)
         carry = nil, stun = 0, flatT = 0,
         wrig = 0, wrigDir = 1,
         flying = false, stam = C.FLAP_STAM, flapS = 0,
-        rumT = 0, actT = 0, actAnim = 0, alertT = 0,
+        rumT = 0, actT = 0, alertT = 0,
         pounceT = 0, hopT = 0, parkT = 0,
         still = true,
     }
@@ -83,7 +83,6 @@ end
 
 local function tryAction(m)
     m.actT = 0.5
-    m.actAnim = 0.15
     local b = Bins.at(m.x, m.y)
     if b and Bins.interact(m, b) then return end
     if Loot.pickup(m) then return end
@@ -209,7 +208,6 @@ local function parked(m, dt)
                 Sfx.plunge()
                 Houses.noise(m.x, m.y, 0.5)
                 Harness.count("chickPiles")
-                m.actAnim = 0.15
             end
         end
     else -- cat on guard
@@ -243,7 +241,6 @@ function Squad.update(dt, inp)
         m.flatT = math.max(0, m.flatT - dt)
         m.rumT = math.max(0, m.rumT - dt)
         m.actT = math.max(0, m.actT - dt)
-        m.actAnim = math.max(0, m.actAnim - dt)
         m.alertT = math.max(0, m.alertT - dt)
         m.pounceT = math.max(0, m.pounceT - dt)
         m.hopT = math.max(0, m.hopT - dt)

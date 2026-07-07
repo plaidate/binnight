@@ -140,9 +140,6 @@ Harness.autopilot = function()
         return inp
     end
 
-    -- scripted blunder: get caught carrying in the porch light. The cone
-    -- only reaches the yard/path, so once the light is on we must walk INTO
-    -- it and fidget - clattering from the curb never gets anyone caught.
     -- scripted blunder: get caught carrying in the porch light. Fully
     -- self-contained at dogless house 1: grab something from its bins,
     -- rummage-noise until the light flips, then fidget inside the cone
