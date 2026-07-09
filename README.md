@@ -1,5 +1,7 @@
 # Bin Night
 
+> Part of **[plAIdate](https://plaidate.github.io)** — AI-built 1-bit games, ports, and engines for the Playdate.
+
 *A tag-team trash heist for Playdate.* One street. One night. Three mouths to feed.
 
 ![screenshot](screenshot.png)
