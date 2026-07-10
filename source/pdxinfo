@@ -1,6 +1,7 @@
 name=Bin Night
-author=sdwfrost
+author=Simon Frost
 description=A tag-team trash heist. Trash Panda pries and hauls, Bin Chicken flies and plunges, Alley Cat sprints and pounces: loot the street into your alley cache before the dawn garbage truck eats it, and keep the whole crew working - even the ones you are not controlling.
 bundleID=com.sdwfrost.binnight
 version=0.1
-buildNumber=1
+buildNumber=2
+imagePath=launcher
